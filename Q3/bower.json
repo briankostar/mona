@@ -1,0 +1,27 @@
+{
+  "name": "Brian's Q3",
+  "version": "0.0.1",
+  "authors": [
+    "Brian Ko <brian.kostar@gmail.com>"
+  ],
+  "description": "Simple app for Mona",
+  "main": "index.html",
+  "keywords": [
+    "mona",
+    "q3"
+  ],
+  "license": "MIT",
+  "homepage": "briankostar.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5",
+    "moment": "~2.9.0"
+  }
+}

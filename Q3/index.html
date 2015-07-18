@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script type="text/javascript" src="bower_components/moment/moment.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="css/bootstrap/js/bootstrap.js"></script>
+    <link rel="import" href="elements/websiteinc­-friendlytime.html">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="centerIt">
+                    <h1>Brian's First Polymer</h1>
+                    <hr>
+                    <br>
+                    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+                        Checkout the readme!
+                    </button>
+
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Read Me</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Make sure to have bower and run 'bower install' to install required modules.</p>
+                                    <p> Open index.html through a server to ensure polymer components load. </p>
+                                    <p>You can 'npm install -g live-server', and run 'live-server' to serve the files on localhost:8080 </p>
+                                    <p>To add a polymer element: Just add this tag to the html with the time you want!</p>
+                                    <b>&lt;websiteinc-friendlytime time="2015-03-9 8:18:00"&gt;&lt;/websiteinc-friendlytime&gt;</b>
+                                    <p> Time will update as you wait.</p>
+                                    <h4>Thanks for checking out my first polymer app! It was fun building this!</h4>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <websiteinc-friendlytime time="2015-03-9 8:18:00" class="time"></websiteinc-friendlytime>
+                    <websiteinc-friendlytime time="2015-03-11 8:18:00" class="time"></websiteinc-friendlytime>
+                    <websiteinc-friendlytime time="2015-04-10 8:18:00" class="time"></websiteinc-friendlytime>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- NOTE -->
+<!-- Moment Time Output Range -->
+<!-- 
+0 to 45 seconds             s   seconds ago
+45 to 90 seconds            m   a minute ago
+90 seconds to 45 minutes    mm  2 minutes ago ... 45 minutes ago
+45 to 90 minutes            h   an hour ago
+90 minutes to 22 hours      hh  2 hours ago ... 22 hours ago
+22 to 36 hours              d   a day ago 
+-->

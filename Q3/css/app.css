@@ -1,0 +1,19 @@
+.time {
+    text-align: center;
+    font-size: 300%;
+}
+.position {
+    height: 75%;
+    margin-top: 15%;
+}
+.centerIt {
+	text-align: center;
+}
+h1 {
+	font-size: 350%;
+	text-decoration: underline;
+    margin-bottom: 20px;
+}
+body {
+    background: #eaeaea url('./css/img/bg.png');
+}

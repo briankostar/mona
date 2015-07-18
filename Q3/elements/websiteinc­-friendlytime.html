@@ -1,0 +1,27 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="websiteinc-friendlytime" attributes="time">
+  <template>
+  	<div>That's {{updatedTime}}!</div>
+  </template>
+  <script>
+  Polymer({
+  	time: this.time = moment(new Date()),//.format('MMMM Do YYYY, h:mm:ss a'),
+  	updatedTime: moment(),
+  	//on ready, overriding default time with time from attribute, and also calling updateTime
+  	ready: function(){
+  		this.time = moment(new Date(this.time));
+  		// this.time = moment(new Date(this.time)).format('MMMM Do YYYY, h:mm:ss a');//startOf('second').fromNow()
+  		this.updateTime();
+  	},
+  	updateTime: function(){
+        this.updatedTime = moment(this.time).startOf('second').fromNow();
+        this.async(this.updateTime, null, 1000);           
+    }
+
+  });
+  </script>
+</polymer-element>
+
+
+<!-- bonus: style, live update, input -->
